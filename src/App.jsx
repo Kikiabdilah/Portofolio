@@ -164,9 +164,14 @@ export default function App() {
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Hi, Welcome To My Portofolio
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-400 mb-12">
-              Membangun pengalaman digital yang menakjubkan
+            <div className="flex flex-row justify-center gap-3">
+            <p className="text-2xl md:text-2xl text-gray-400">
+              Frontend
             </p>
+            <p className="text-2xl md:text-2xl text-gray-400 ">
+              Web Developer
+            </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-4xl mx-auto">
               <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all hover:scale-105">
