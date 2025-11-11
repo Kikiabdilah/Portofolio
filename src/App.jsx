@@ -27,16 +27,16 @@ export default function App() {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
     },
     {
+      name: "Laravel",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+    },
+    {
       name: "MySQL",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
     {
       name: "Git",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    },
-    {
-      name: "Bootstrap",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     },
   ];
 
@@ -185,9 +185,9 @@ export default function App() {
                 {/* Buttons */}
                 <div className="flex flex-wrap gap-4 pt-4">
                   <a href="cv.pdf" target="_blank" rel="noopener noreferrer">
-                  <button className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold text-white hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105">
-                    Download CV
-                  </button>
+                    <button className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold text-white hover:shadow-2xl hover:shadow-blue-500/50 transition-all hover:scale-105">
+                      Download CV
+                    </button>
                   </a>
                   <button
                     onClick={() => scrollToSection("contact")}
@@ -270,22 +270,31 @@ export default function App() {
           className="min-h-screen flex items-center justify-center p-8 md:p-16"
         >
           <div className="max-w-4xl">
-            <h2 className="text-5xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl flex justify-center font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               About Me
             </h2>
             <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-10">
-              <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                Saya adalah seorang web developer yang passionate dalam
-                menciptakan aplikasi web yang indah, responsif, dan
-                user-friendly. Dengan pengalaman lebih dari 3 tahun di bidang
-                pengembangan web, saya telah mengerjakan berbagai projek dari
-                startup hingga perusahaan besar.
+              <p className="text-xl text-gray-300 leading-relaxed mb-5">
+                Saya adalah Sarjana Komputer dari Universitas Islam Negeri
+                Sumatera Utara (IPK 3,47) dengan minat yang kuat pada
+                pengembangan web modern. Perjalanan saya dimulai dari membuat
+                website statis sederhana, hingga kini fokus membangun aplikasi
+                web yang lebih terstruktur dan scalable menggunakan Laravel,
+                React, dan Tailwind CSS.
+              </p>
+              <p className="text-xl text-gray-300 leading-relaxed mb-5">
+                Saya terbiasa mengembangkan fitur mulai dari sisi frontend
+                menggunakan React dan Tailwind untuk antarmuka yang bersih dan
+                responsif, hingga backend berbasis PHP Laravel untuk mengelola
+                logic aplikasi dan integrasi database.
               </p>
               <p className="text-xl text-gray-300 leading-relaxed">
-                Saya selalu antusias untuk mempelajari teknologi baru dan
-                menghadapi tantangan yang membantu saya berkembang sebagai
-                developer. Fokus saya adalah menulis kode yang bersih,
-                maintainable, dan mengikuti best practices.
+                Saya terus memperdalam pemahaman tentang arsitektur aplikasi,
+                API integration, reusable component, state management, serta
+                workflow pengembangan yang rapi menggunakan Git. Fokus saya
+                adalah membangun aplikasi yang tidak hanya berfungsi, tetapi
+                juga memiliki struktur kode yang bersih, mudah dikembangkan, dan
+                nyaman digunakan.
               </p>
             </div>
           </div>
