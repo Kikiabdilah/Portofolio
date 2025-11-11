@@ -16,8 +16,7 @@ export const projects = [
   },
   {
     title: "E-Commerce Website",
-    description:
-      "RedStore adalah sebuah landing page untuk toko olahraga.",
+    description: "RedStore adalah sebuah landing page untuk toko olahraga.",
     tech: ["HTML", "CSS", "Javascript"],
     image: project2,
     demoLink: "https://kikiabdilah.github.io/red-store/",
@@ -29,8 +28,8 @@ export const projects = [
       "GPT-3 OpenAI Landing Page adalah website bertema AI dan teknologi dengan desain futuristik",
     tech: ["React", "CSS"],
     image: project3,
-    demoLink: "https://your-demo-link.com",
-    githubLink: "https://github.com/yourusername/portfolio-website",
+    demoLink: "https://kikiabdilah.github.io/gpt3/",
+    githubLink: "https://github.com/Kikiabdilah/gpt3/tree/gh-pages",
   },
   {
     title: "Course Website",
@@ -38,8 +37,8 @@ export const projects = [
       "landing page untuk platform kursus kreatif yang dirancang dengan desain penuh warna.",
     tech: ["React", "CSS"],
     image: project4,
-    demoLink: "https://your-demo-link.com",
-    githubLink: "https://github.com/yourusername/weather-dashboard",
+    demoLink: "https://kikiabdilah.github.io/course-website/",
+    githubLink: "https://github.com/Kikiabdilah/course-website",
   },
   {
     title: "World Explorer",
@@ -47,7 +46,9 @@ export const projects = [
       "Website ini dirancang untuk menampilkan data negara-negara yang diperoleh dari API",
     tech: ["React", "API Integration", "Chart.js"],
     image: project7,
-    demoLink: "https://your-demo-link.com",
-    githubLink: "https://github.com/yourusername/weather-dashboard",
+    demoLink: "https://kikiabdilah.github.io/countries/",
+    githubLink: "https://github.com/Kikiabdilah/countries",
   },
 ];
+
+export default projects;
