@@ -47,13 +47,11 @@ export default function App() {
         setActiveSection={setActiveSection}
         scrollToSection={scrollToSection}
       />
-      <main className="ml-0">
         <Home />
         <About />
         <Skills />
         <Projects />
         <Contact />
-      </main>
     </div>
   );
 }
