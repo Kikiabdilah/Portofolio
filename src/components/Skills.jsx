@@ -19,14 +19,14 @@ export default function Skills() {
               className="flex flex-col items-center bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-blue-500/30 transition-all hover:-translate-y-1"
             >
               <div className="w-20 h-20 rounded-full bg-gray-700/40 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/10">
-                {typeof skill.icon === "string" ? (
+                {skill.type === "img" ? (
                   <img
                     src={skill.icon}
                     alt={skill.name}
                     className="w-10 h-10"
                   />
                 ) : (
-                  <div className="text-5xl text-blue-400">{skill.icon}</div>
+                  <skill.icon className="text-5xl" />
                 )}
               </div>
 

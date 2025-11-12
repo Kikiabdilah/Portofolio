@@ -1,37 +1,48 @@
-import {BiLogoTailwindCss} from "react-icons/bi";
+import { VscCode } from "react-icons/vsc";
+import { BiLogoTailwindCss } from "react-icons/bi";
+import { BiLogoJavascript, BiLogoReact, BiLogoPhp, BiLogoGit } from "react-icons/bi";
+import { SiLaravel, SiMysql } from "react-icons/si";
 
 const skills = [
   {
     name: "VS Code",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    type: "react",
+    icon: VscCode,
   },
   {
     name: "Tailwind CSS",
+    type: "react",
     icon: BiLogoTailwindCss,
   },
   {
     name: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    type: "react",
+    icon: BiLogoJavascript,
   },
   {
     name: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    type: "react",
+    icon: BiLogoReact,
   },
   {
     name: "PHP",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    type: "react",
+    icon: BiLogoPhp,
   },
   {
     name: "Laravel",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+    type: "react",
+    icon: SiLaravel,
   },
   {
     name: "MySQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    type: "react",
+    icon: SiMysql,
   },
   {
     name: "Git",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    type: "react",
+    icon: BiLogoGit,
   },
 ];
 
