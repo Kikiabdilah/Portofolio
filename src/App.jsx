@@ -17,10 +17,8 @@ export default function App() {
   };
 
 useEffect(() => {
-  // Matikan fitur restore posisi otomatis dari browser
   window.history.scrollRestoration = "manual";
 
-  // Pastikan halaman mulai dari atas saat reload
   window.scrollTo({ top: 0, behavior: "instant" });
 
   const handleScroll = () => {
@@ -42,17 +40,15 @@ useEffect(() => {
     }
   };
 
-  // Jalankan sekali di awal agar state sinkron
   handleScroll();
 
-  // Tambahkan listener scroll
   window.addEventListener("scroll", handleScroll);
 
-  // Bersihkan efek saat komponen unmount
   return () => {
     window.removeEventListener("scroll", handleScroll);
   };
 }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-gray-100">
       <Sidebar
@@ -60,11 +56,11 @@ useEffect(() => {
         setActiveSection={setActiveSection}
         scrollToSection={scrollToSection}
       />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
     </div>
   );
 }
