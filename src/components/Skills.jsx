@@ -26,7 +26,8 @@ export default function Skills() {
                     className="w-10 h-10"
                   />
                 ) : (
-                  <skill.icon className="text-5xl" />
+                    <skill.icon className="text-5xl hover:scale-110 transition-transform duration-300"
+                    style={{ color: skill.color }} />
                 )}
               </div>
 
