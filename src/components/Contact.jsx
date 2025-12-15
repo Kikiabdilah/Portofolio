@@ -22,7 +22,7 @@ export default function Contact() {
             {/* EMAIL */}
             <div className="flex items-start gap-4 p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all">
               <div className="p-3 bg-blue-500/20 rounded-xl shrink-0">
-                <Mail className="text-blue-400" size={22} />
+                <Mail className="text-blue-400" size={20} />
               </div>
               <div className="min-w-0">
                 <p className="text-sm text-gray-400 mb-1">Email</p>
@@ -35,7 +35,7 @@ export default function Contact() {
             {/* LOKASI */}
             <div className="flex items-start gap-4 p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all">
               <div className="p-3 bg-purple-500/20 rounded-xl shrink-0">
-                <User className="text-purple-400" size={22} />
+                <User className="text-purple-400" size={20} />
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Lokasi</p>
