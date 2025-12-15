@@ -26,7 +26,7 @@ export default function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-sm text-gray-400 mb-1">Email</p>
-                <p className="text-base md:text-xl text-gray-200 break-all">
+                <p className="text-base md:text-lg text-gray-200 break-all">
                   Kiensa1234@gmail.com
                 </p>
               </div>
@@ -39,7 +39,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Lokasi</p>
-                <p className="text-base md:text-xl text-gray-200">
+                <p className="text-base md:text-lg text-gray-200">
                   Indonesia
                 </p>
               </div>
