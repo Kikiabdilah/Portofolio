@@ -31,7 +31,7 @@ export default function Skills() {
                 )}
               </div>
 
-              <span className="text-gray-200 text-lg font-semibold">
+              <span className="text-gray-200 text-lg font-semibold text-center">
                 {skill.name}
               </span>
             </div>
