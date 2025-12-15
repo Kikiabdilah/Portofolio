@@ -1,53 +1,60 @@
-import react from "react";
-import {Mail, User} from "lucide-react";
-import {FaGithub, FaLinkedin} from "react-icons/fa";
+import React from "react";
+import { Mail, User } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center p-8 md:p-8"
+      className="min-h-screen flex items-center justify-center p-6 md:p-8"
     >
       <div className="max-w-4xl w-full">
-        <h2 className="text-5xl md:text-6xl pb-4 font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-6xl pb-4 font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
           Hubungi Saya
         </h2>
 
-        <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-10">
-          <p className="text-xl text-gray-300 mb-4 text-center">
+        <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 md:p-10">
+          <p className="text-lg md:text-xl text-gray-300 mb-6 text-center">
             Tertarik untuk berdiskusi atau berkolaborasi?
           </p>
 
-          <div className="space-y-3 mb-2">
-            <div className="flex items-center space-x-6 p-2 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all">
-              <div className="p-4 bg-blue-500/20 rounded-xl">
-                <Mail className="text-blue-400" size={24} />
+          <div className="space-y-4">
+            {/* EMAIL */}
+            <div className="flex items-start gap-4 p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all">
+              <div className="p-3 bg-blue-500/20 rounded-xl shrink-0">
+                <Mail className="text-blue-400" size={22} />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm text-gray-400 mb-1">Email</p>
-                <p className="text-xl text-gray-200">Kiensa1234@gmail.com</p>
+                <p className="text-base md:text-xl text-gray-200 break-all">
+                  Kiensa1234@gmail.com
+                </p>
               </div>
             </div>
 
-            <div className="flex items-center space-x-6 p-2 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all">
-              <div className="p-4 bg-purple-500/20 rounded-xl">
-                <User className="text-purple-400" size={24} />
+            {/* LOKASI */}
+            <div className="flex items-start gap-4 p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all">
+              <div className="p-3 bg-purple-500/20 rounded-xl shrink-0">
+                <User className="text-purple-400" size={22} />
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Lokasi</p>
-                <p className="text-xl text-gray-200">Indonesia</p>
+                <p className="text-base md:text-xl text-gray-200">
+                  Indonesia
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="flex justify-center gap-6 mt-4">
+          {/* SOCIAL */}
+          <div className="flex justify-center gap-6 mt-8">
             <a
               href="https://github.com/Kikiabdilah"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-gray-700/40 rounded-full hover:bg-gray-600/60 transition-all hover:scale-110"
             >
-              <FaGithub size={28} className="text-white" />
+              <FaGithub size={26} className="text-white" />
             </a>
 
             <a
@@ -56,7 +63,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="p-4 bg-blue-600/40 rounded-full hover:bg-blue-600/70 transition-all hover:scale-110"
             >
-              <FaLinkedin size={28} className="text-blue-300" />
+              <FaLinkedin size={26} className="text-blue-300" />
             </a>
           </div>
         </div>
