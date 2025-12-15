@@ -16,51 +16,44 @@ export default function App() {
     }
   };
 
-useEffect(() => {
-  window.history.scrollRestoration = "manual";
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "about", "skills", "projects", "contact"];
+      const scrollPosition = window.scrollY + 200;
 
-  window.scrollTo({ top: 0, behavior: "instant" });
-
-  const handleScroll = () => {
-    const sections = ["home", "about", "skills", "projects", "contact"];
-    const scrollPosition = window.scrollY + 200;
-
-    for (const sectionId of sections) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const { offsetTop, offsetHeight } = element;
-        if (
-          scrollPosition >= offsetTop &&
-          scrollPosition < offsetTop + offsetHeight
-        ) {
-          setActiveSection(sectionId);
-          break;
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const {offsetTop, offsetHeight} = element;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(sectionId);
+            break;
+          }
         }
       }
-    }
-  };
+    };
 
-  handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-  window.addEventListener("scroll", handleScroll);
-
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-gray-100">
+    <div className="min-h-screen bg-gray-900 text-gray-100">
       <Sidebar
         activeSection={activeSection}
-        setActiveSection={setActiveSection}
         scrollToSection={scrollToSection}
       />
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
     </div>
   );
 }
