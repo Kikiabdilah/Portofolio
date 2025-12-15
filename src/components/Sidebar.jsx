@@ -1,40 +1,75 @@
-import react from "react";
+import React, {useState} from "react";
+import {Menu, X} from "lucide-react";
 import menuItems from "../utils/menuItems";
 
-export default function Sidebar({activeSection, setActiveSection, scrollToSection}) {
-  return (
-    <nav className="fixed top-1/2 -translate-x -translate-y-1/2 z-50">
-      <div className="flex flex-col space-y-4 bg-gray-800/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-4 shadow-2xl">
-        {menuItems.map((item) => {
-          const Icon = item.icon;
-          return (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={`group relative p-4 rounded-xl transition-all duration-300 ${
-                activeSection === item.id
-                  ? "bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/50"
-                  : "bg-gray-700/30 hover:bg-gray-700/50"
-              }`}
-              title={item.label}
-            >
-              <Icon
-                size={24}
-                className={`${
-                  activeSection === item.id
-                    ? "text-white"
-                    : "text-gray-400 group-hover:text-white"
-                } transition-colors`}
-              />
+export default function Sidebar({activeSection, scrollToSection}) {
+  const [open, setOpen] = useState(false);
 
-              {/* Tooltip */}
-              <span className="absolute left-full ml-4 px-3 py-2 bg-gray-800 text-sm rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-700">
-                {item.label}
-              </span>
-            </button>
-          );
-        })}
-      </div>
-    </nav>
+  const handleClick = (id) => {
+    scrollToSection(id);
+    setOpen(false); // auto close di mobile
+  };
+
+  return (
+    <>
+      {/* ===== HAMBURGER (MOBILE) ===== */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="fixed top-4 right-4 z-50 md:hidden bg-gray-800 p-3 rounded-xl border border-gray-700"
+      >
+        {open ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* ===== SIDEBAR DESKTOP ===== */}
+      <nav className="hidden md:flex fixed top-1/2 -translate-y-1/2 left-4 z-40">
+        <div className="flex flex-col space-y-4 bg-gray-800/40 backdrop-blur border border-gray-700 rounded-2xl p-4">
+          {menuItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleClick(item.id)}
+                className={`p-4 rounded-xl transition ${
+                  activeSection === item.id
+                    ? "bg-blue-600"
+                    : "bg-gray-700 hover:bg-gray-600"
+                }`}
+              >
+                <Icon size={22} />
+              </button>
+            );
+          })}
+        </div>
+      </nav>
+
+      {/* ===== MENU MOBILE ===== */}
+      {open && (
+        <div className="fixed inset-0 z-40 md:hidden bg-black/60">
+          <div className="absolute right-0 top-0 h-full w-64 bg-gray-900 p-6 border-l border-gray-700">
+            <h2 className="text-lg font-semibold mb-6">Menu</h2>
+
+            <div className="flex flex-col gap-3">
+              {menuItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleClick(item.id)}
+                    className={`flex items-center gap-3 px-4 py-3 rounded-lg ${
+                      activeSection === item.id
+                        ? "bg-blue-600"
+                        : "bg-gray-800 hover:bg-gray-700"
+                    }`}
+                  >
+                    <Icon size={20} />
+                    <span>{item.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
